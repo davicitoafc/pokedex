@@ -1,10 +1,36 @@
-<h1>Pokemon!</h1>
+<h1>Pokedex!</h1>
 
-
-<% @pokemons.each do |pokemon| %>
-<ul>
-  <li>
-    <p><%= pokemon.name %></p>
-  </li>
+<ul id="poke_dex">
+  <% @pokemons.each do |pokemon| %>
+    <li>
+      <%= link_to pokemon.name, pokemon_url(pokemon) %>
+    </li>
+  <% end %>
 </ul>
-<% end %>
+
+<script id="pokemon-template" type="text/x-handlebars-template">
+  <img src="{{image_tag}}" alt="Photo of {{name}}">
+  <dl>
+    <dt>Name:</dt>
+    <dd>{{name}}</dd>
+
+    <dt>Attack:</dt>
+    <dd>{{attack}}</dd>
+
+    <dt>Defense:</dt>
+    <dd>{{defense}}</dd>
+
+    <dt>Happiness:</dt>
+    <dd>{{happiness}}</dd>
+
+    <dt>Speed:</dt>
+    <dd>{{speed}}</dd>
+
+    <dt>Species:</dt>
+    <dd>{{species}}</dd>
+
+    <dt>Growth Rate:</dt>
+    <dd>{{growth_rate}}</dd>
+  </dl>
+
+</script>

@@ -1,3 +1,24 @@
-<h1>Pokemon#show</h1>
+<%= image_tag @pokemon.image_url %>
 
-<%= @pokemons.each do |poke| %>
+<dl>
+  <dt>Name:</dt>
+  <dd><%= @pokemon.name %></dd>
+
+  <dt>Attack:</dt>
+  <dd><%= @pokemon.attack %></dd>
+
+  <dt>Defense:</dt>
+  <dd><%= @pokemon.defense %></dd>
+
+  <dt>Happiness:</dt>
+  <dd><%= @pokemon.happiness %></dd>
+
+  <dt>Speed:</dt>
+  <dd><%= @pokemon.speed %></dd>
+
+  <dt>Species:</dt>
+  <dd><%= @pokemon.species %></dd>
+
+  <dt>Growth Rate:</dt>
+  <dd><%= @pokemon.growth_rate %></dd>
+</dl>
