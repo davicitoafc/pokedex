@@ -1,5 +1,7 @@
 <h1>Pokedex!</h1>
 
+<div id="pokes"></div>
+
 <ul id="poke_dex">
   <% @pokemons.each do |pokemon| %>
     <li>
@@ -9,7 +11,7 @@
 </ul>
 
 <script id="pokemon-template" type="text/x-handlebars-template">
-  <img src="{{image_tag}}" alt="Photo of {{name}}">
+  <img src="{{image_url}}" alt="Photo of {{name}}">
   <dl>
     <dt>Name:</dt>
     <dd>{{name}}</dd>

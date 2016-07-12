@@ -14,8 +14,13 @@ $(document).on('ready', function() {
       dataType: 'json'
     }).done(function(responseData) {
 
-      console.log(responseData)
+      var source = $('#pokemon-template').html();
+      var template = Handlebars.compile(source);
+      var output = template(responseData);
 
-    })
+      $('#pokes').html(output);
+    }).fail(function() {
+       console.log("Something is wrong");
+    });
   });
 });
